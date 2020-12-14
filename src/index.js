@@ -1,5 +1,10 @@
 import "../sass/main.scss";
+import log from "./log"
 
-const title = document.getElementsByClassName("title");
+log();
 
-console.log(title)
+let x = document.getElementsByClassName("html");
+
+function myfunction() {
+    alert("toto")
+}
