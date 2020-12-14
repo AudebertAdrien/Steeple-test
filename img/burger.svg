@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <g id="Menu" transform="translate(8 8)">
+    <rect id="Rectangle_5" data-name="Rectangle 5" width="64" height="64" transform="translate(-8 -8)" fill="none"/>
+    <rect id="Rectangle_6" data-name="Rectangle 6" width="36" height="4" rx="2" transform="translate(6 10)" fill="#fff"/>
+    <rect id="Rectangle_7" data-name="Rectangle 7" width="36" height="4" rx="2" transform="translate(6 22)" fill="#fff"/>
+    <rect id="Rectangle_8" data-name="Rectangle 8" width="36" height="4" rx="2" transform="translate(6 34)" fill="#fff"/>
+  </g>
+</svg>

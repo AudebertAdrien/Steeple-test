@@ -1,0 +1,22 @@
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    background-color: #707070;
+    &__nav{
+         display: none;
+    }
+    &__list {
+        list-style: none;
+    }
+    &__link {
+        &:link,
+        &:visited {
+            text-transform: uppercase;
+            text-decoration: none;
+            color: #BFBFBF;
+            font-size: 1.6rem;
+        }
+        
+    }
+    
+}
