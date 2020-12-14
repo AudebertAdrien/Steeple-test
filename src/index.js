@@ -1,10 +1,7 @@
 import "../sass/main.scss";
-import log from "./log"
 
-log();
+const btn = document.getElementById("html");
 
-let x = document.getElementsByClassName("html");
-
-function myfunction() {
-    alert("toto")
-}
+btn.addEventListener("click", () => {
+  alert("toto")
+});
