@@ -10,7 +10,7 @@
     background-color: $color-primary;
   }
   &__nav {
-    display: none;
+    display: block;
     position: relative;
     height: 100vh;
     width: 100vw;
@@ -25,7 +25,7 @@
     &--title {
       font-size: 2rem;
       text-transform: uppercase;
-      margin-left: 35%;
+      margin-left: calc((100% - 16%) - (84% / 2) - 4rem) ;
       padding: 2rem;
       color: $color-secondary;
     }
@@ -34,9 +34,19 @@
     list-style: none;
   }
   &__item {
+    position: relative;
     height: 6.4rem;
-    &:active {
-      border-left: 1px solid red;
+    &:active::before {
+      content: "";
+      display: block;
+      position: absolute;
+      margin: auto;
+      top: 0; bottom: 0;
+      border: 1px solid $color-border;
+      background-color:$color-white;
+      border-radius: 50%;
+      width: 3px;
+      height: 95%;
     }
   }
   &__link {
@@ -51,9 +61,4 @@
       font-size: 1.6rem;
     }
   }
-}
-
-h1 {
-  margin-top: 20rem;
-  color: blue;
 }
