@@ -3,12 +3,31 @@
   top: 0;
   left: 0;
   right: 0;
-  background-color: $color-white;
+  overflow: hidden;
+
+  @include respond(desktop) {
+    background-color: $color-primary;
+  }
+
   &__bar {
     display: flex;
     justify-content: space-between;
     box-shadow: 0px 1px 1px $color-border;
     background-color: $color-primary;
+
+    @include respond(desktop) {
+      box-shadow: none;
+      max-width: 100rem;
+      margin: auto;
+
+      & .navigation__toggle {
+        order: 2;
+        display: none;
+      }
+      & .logo-icon{
+        order: 1;
+      }
+    }
   }
   &__nav {
     display: none;
@@ -28,11 +47,11 @@
     }
 
     @include respond(tab) {
-       max-width: 40vw;
+      max-width: 40vw;
     }
     @include respond(desktop) {
       display: none;
-   }
+    }
   }
   &__list {
     list-style: none;
@@ -45,9 +64,10 @@
       display: block;
       position: absolute;
       margin: auto;
-      top: 0; bottom: 0;
+      top: 0;
+      bottom: 0;
       border: 1px solid $color-border;
-      background-color:$color-white;
+      background-color: $color-white;
       border-radius: 50%;
       width: 3px;
       height: 95%;
