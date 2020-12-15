@@ -9,21 +9,27 @@ $ npm run dev
  - Installation des packages visant à utiliser Babel, Webpack, Sass
  - Mise en place et configuration de Webpack, Babel
  - Architecture du dossier Sass
- - Conviention de nomage BEM de l'HTML
+ - Conviention de nomage BEM des class HTML
  - Intégration d'une navbar(primaire) version mobile
 
-#### Objectif pour demain
- - Finir la maquette
- - S'informer sur l'accessibilité d'un site web et la mettre en pratique sur le projet
+#### J2/ 10H - 22h
+ - Integration de la maquette
+ - Version mobile, tab, desktop
+
+#### J3
+- S'informer sur l'accessibilité d'un site web et la mettre en pratique sur le projet
     - [codez-un-site-web-accessible-avec-html-css](https://openclassrooms.com/fr/courses/6691451-codez-un-site-web-accessible-avec-html-css)
     - [concevez-un-contenu-web-accessible](https://openclassrooms.com/fr/courses/6691346-concevez-un-contenu-web-accessible)
-
 
 #### Check consigne
 
 | CONSIGNE | DONE |
 | ------ | ------ |
-| test1 | X |
+| Integration maquette | X |
+| Responsive | X |
+| Webpack, Babel, Sass | X |
+| Accessibilité | |
+
 
 
  **Adrien Audebert**
