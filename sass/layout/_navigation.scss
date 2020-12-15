@@ -13,19 +13,15 @@
     display: block;
     position: relative;
     height: 100vh;
-    width: 100vw;
-    background: linear-gradient(
-      to right,
-      $color-primary 84%,
-      rgba(0, 0, 0, 0.1) 16%
-    );
+    max-width: 81vw;
+    background-color: $color-primary;
     z-index: -100;
 
     $self: &;
     &--title {
+      text-align: center;
       font-size: 2rem;
       text-transform: uppercase;
-      margin-left: calc((100% - 16%) - (84% / 2) - 4rem) ;
       padding: 2rem;
       color: $color-secondary;
     }
