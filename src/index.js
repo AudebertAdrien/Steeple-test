@@ -1,7 +1,15 @@
 import "../sass/main.scss";
 
-const btn = document.getElementById("html");
+const navbarToggler = document.getElementById("navbar-toggler");
+const togglerIcon = document.querySelector(".toggler-icon");
+const navigationNav = document.getElementsByClassName("navigation__nav")[0];
 
-btn.addEventListener("click", () => {
-  alert("toto")
+navbarToggler.addEventListener("click", () => {
+  if (navigationNav.style.display === "block") {
+    togglerIcon.src = "img/burger.svg";
+    navigationNav.style.display = "none";
+  } else {
+    togglerIcon.src = "img/left-arrow.svg";
+    navigationNav.style.display = "block";
+  }
 });
