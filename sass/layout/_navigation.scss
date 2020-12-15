@@ -14,6 +14,9 @@
     justify-content: space-between;
     box-shadow: 0px 1px 1px $color-border;
     background-color: $color-primary;
+    & .navigation-list-desktop {
+      display: none;
+    }
 
     @include respond(desktop) {
       box-shadow: none;
@@ -21,11 +24,17 @@
       margin: auto;
 
       & .navigation__toggle {
-        order: 2;
         display: none;
       }
-      & .logo-icon{
+      & .logo-icon {
         order: 1;
+      }
+      & .navigation-list-desktop {
+        display: block;
+        order: 2;
+        & .navigation__list {
+          display: flex;
+        }
       }
     }
   }
@@ -63,14 +72,25 @@
       content: "";
       display: block;
       position: absolute;
-      margin: auto;
+      width: 1px;
+      height: 95%;
       top: 0;
       bottom: 0;
-      border: 1px solid $color-border;
-      background-color: $color-white;
-      border-radius: 50%;
-      width: 3px;
-      height: 95%;
+      margin: auto 0 auto 2px;
+      border: 1px solid $color-white;
+      border-radius: 5px;
+    }
+
+    @include respond(desktop) {
+      &:active::before {
+        width: 95%;
+        height: 2px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 100%;
+        margin-bottom: 2px;
+      }
     }
   }
   &__link {

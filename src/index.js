@@ -16,10 +16,22 @@ navbarToggler.addEventListener("click", () => {
   }
 });
 
-window.addEventListener("resize", (e) => {
+const navigationList = document.querySelector(".navigation__list");
+const navigationListDesktop = document.querySelector(
+  ".navigation-list-desktop"
+);
+
+window.onload = function () {
   if (window.innerWidth >= 900) {
-    if ((navigationNav.style.display = "block")) {
-      navigationNav.style.display = "none";
-    }
+    navigationListDesktop.insertAdjacentElement("afterbegin", navigationList);
+  }
+};
+
+window.addEventListener("resize", () => {
+  if (window.innerWidth >= 900) {
+    navigationListDesktop.insertAdjacentElement("afterbegin", navigationList);
+  }
+  if ((navigationNav.style.display = "block")) {
+    navigationNav.style.display = "none";
   }
 });
