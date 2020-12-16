@@ -1,11 +1,11 @@
 import "../sass/main.scss";
 
 const navigation = document.querySelector(".navigation");
-const navbarToggler = document.querySelector(".navigation__toggle");
-const navigationNav = document.querySelector(".navigation__nav");
+const navigationToggle = document.querySelector(".navigation__toggle");
 const swapingIcon = document.querySelector(".toggle-icon");
+const navigationNav = document.querySelector(".navigation__nav");
 
-navbarToggler.addEventListener("click", () => {
+navigationToggle.addEventListener("click", () => {
   if (navigationNav.style.display === "block") {
     swapingIcon.src = "img/burger.svg";
     navigationNav.style.display = "none";
@@ -17,21 +17,24 @@ navbarToggler.addEventListener("click", () => {
 });
 
 const navigationList = document.querySelector(".navigation__list");
+let clone = navigationList.cloneNode(true);
 const navigationListDesktop = document.querySelector(
   ".navigation-list-desktop"
-);
-
+  );
+  
 window.onload = function () {
   if (window.innerWidth >= 900) {
-    navigationListDesktop.insertAdjacentElement("afterbegin", navigationList);
+    navigationListDesktop.appendChild(clone);
   }
 };
 
-window.addEventListener("resize", () => {
+window.addEventListener("resize", (e) => {
   if (window.innerWidth >= 900) {
-    navigationListDesktop.insertAdjacentElement("afterbegin", navigationList);
-  }
-  if ((navigationNav.style.display = "block")) {
+    swapingIcon.src = "img/burger.svg";
+    navigationListDesktop.appendChild(clone);
+    navigation.style.backgroundColor = "#404040"
     navigationNav.style.display = "none";
   }
 });
+
+
