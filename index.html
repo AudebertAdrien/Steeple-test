@@ -1,29 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    
+
     <title>Steeple</title>
 </head>
+
 <body>
-    <div class="navigation">
+    <header class="navigation" role="banner">
+        
         <div class="navigation__bar">
-            <div class="navigation-list-desktop"></div>
-            <a href="#" class="navigation__toggle">
-                <img src="img/burger.svg" class="toggle-icon" alt="Menu">
+            <div class="navigation-list-desktop"></div> <!---->
+
+            <a href="#" class="navigation__toggle" aria-controls="toggleNavigation" aria-expanded="false" aria-label="Toggle navigation">
+                <img src="img/burger.svg" class="toggle-icon" alt="Navigation toggle" role="img">
             </a>
-            <img src="img/logo.svg" class="logo-icon" alt="Steeple">
+            <img src="img/logo.svg" class="logo-icon" alt="Steeple logo" role="img">
         </div>
-        <nav class="navigation__nav">
+
+        <nav class="navigation__nav" id="toggleNavigation">
             <div class="navigation__nav--title">
                 Menu
             </div>
-            <ul class="navigation__list">
+            <ul class="navigation__list" aria-label="main navigation">
                 <li class="navigation__item">
-                    <a href="#" class="navigation__link">Accueil</a>
+                    <a href="#" class="navigation__link" aria-current="page">Accueil</a>
                 </li>
                 <li class="navigation__item">
                     <a href="#" class="navigation__link">Vos avis</a>
@@ -40,7 +45,9 @@
             </ul>
         </nav>
 
-    </div>
+    </header>
+
     <script src="dist/index.js"></script>
 </body>
+
 </html>

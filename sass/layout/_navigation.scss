@@ -12,7 +12,7 @@
     box-shadow: 0 1px 1px $color-border;
     background-color: $color-primary;
 
-    // 
+    // invisible element on phone and tab device
     & .navigation-list-desktop {
       display: none;
     }
