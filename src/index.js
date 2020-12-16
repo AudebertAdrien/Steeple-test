@@ -8,6 +8,7 @@ const swapingIcon = document.querySelector(".toggle-icon");
 const navigationNav = document.querySelector(".navigation__nav");
 const navigationList = document.querySelector(".navigation__list");
 const navigationItems = document.querySelectorAll(".navigation__item");
+const navigationListDesktop = document.querySelector(".navigation-list-desktop");
 
 navigationToggle.addEventListener("click", () => {
   if (navigationNav.style.display === "block") {
@@ -22,11 +23,6 @@ navigationToggle.addEventListener("click", () => {
   }
 });
 
-let clone = navigationList.cloneNode(true);
-const navigationListDesktop = document.querySelector(
-  ".navigation-list-desktop"
-);
-
 for (const link of navigationItems) {
   link.addEventListener("click", () => {
     console.log("test");
@@ -37,15 +33,17 @@ for (const link of navigationItems) {
 
 window.onload = function () {
   if (window.innerWidth >= 900) {
-    navigationListDesktop.appendChild(clone);
+    navigationListDesktop.appendChild(navigationList);
   }
 };
 
 window.addEventListener("resize", (e) => {
   if (window.innerWidth >= 900) {
     swapingIcon.src = "img/burger.svg";
-    navigationListDesktop.appendChild(clone);
+    navigationListDesktop.appendChild(navigationList);
     navigation.style.backgroundColor = "#404040";
     navigationNav.style.display = "none";
+  } else {
+    navigationNav.appendChild(navigationList);
   }
 });
