@@ -8,7 +8,8 @@ const swapingIcon = document.querySelector(".toggle-icon");
 const navigationNav = document.querySelector(".navigation__nav");
 const navigationList = document.querySelector(".navigation__list");
 const navigationItems = document.querySelectorAll(".navigation__item");
-const navigationListDesktop = document.querySelector(".navigation-list-desktop");
+const navigationListDesktop = document.querySelector(".navigation__list-desktop");
+
 
 navigationToggle.addEventListener("click", () => {
   if (navigationNav.style.display === "block") {
@@ -23,9 +24,8 @@ navigationToggle.addEventListener("click", () => {
   }
 });
 
-for (const link of navigationItems) {
-  link.addEventListener("click", () => {
-    console.log("test");
+for (const item of navigationItems) {
+  item.addEventListener("click", () => {
     navigationNav.style.display = "none";
     swapingIcon.src = "img/burger.svg";
   });

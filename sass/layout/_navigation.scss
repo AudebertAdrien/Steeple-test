@@ -1,3 +1,5 @@
+// MOBILE FIRST //
+
 .navigation {
   position: fixed;
   top: 0;
@@ -9,15 +11,14 @@
   &__bar {
     display: flex;
     justify-content: space-between;
-    box-shadow: 0 1px 1px $color-border;
     background-color: $color-primary;
+    box-shadow: 0 1px 1px $color-border;
 
-    // invisible element on phone and tab device
-    & .navigation-list-desktop {
+    // hide element on phone and tab device
+    & .navigation__list-desktop {
       display: none;
     }
 
-    // Navbar top on desktop device
     @include respond(desktop) {
       box-shadow: none;
       max-width: 100rem;
@@ -29,7 +30,7 @@
       & .logo-icon {
         order: 1;
       }
-      & .navigation-list-desktop {
+      & .navigation__list-desktop {
         display: block;
         order: 2;
         & .navigation__list {
@@ -39,7 +40,7 @@
     }
   }
   
-  // Left navbar on phone and tab device
+
   &__nav {
     display: none;
     position: relative;
@@ -100,7 +101,6 @@
     }
   }
 
-  // Link styling
   &__link {
     &:link,
     &:visited {
