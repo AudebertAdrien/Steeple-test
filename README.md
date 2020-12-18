@@ -2,7 +2,8 @@
 
 ```sh
 $ npm install
-$ npm run dev
+$ npm run start //Development
+$ npm run build //Production
 ```
 
 #### J1 / 13H - 00H30h
