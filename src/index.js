@@ -1,7 +1,7 @@
 import "../sass/main.scss";
-import './img/logo.svg';
-import './img/burger.svg';
-import './img/left-arrow.svg';
+import burgerIcon from './img/burger.svg';
+import arrowIcon from './img/left-arrow.svg';
+
 
 const navigation = document.querySelector(".navigation");
 
@@ -17,13 +17,13 @@ const navigationListDesktop = document.querySelector(
 
 navigationToggle.addEventListener("click", () => {
   if (navigationNav.style.display === "block") {
-    swapingIcon.src = "./img/burger.svg";
+    swapingIcon.src = burgerIcon;
     navigationNav.style.display = "none";
     navigationToggle.setAttribute("aria-expanded", "false");
   } else {
     navigationToggle.setAttribute("aria-expanded", "true");
     navigation.style.backgroundColor = "rgba(0, 0, 0, 0.25)";
-    swapingIcon.src = "./img/left-arrow.svg";
+    swapingIcon.src = arrowIcon;
     navigationNav.style.display = "block";
   }
 });
@@ -31,7 +31,7 @@ navigationToggle.addEventListener("click", () => {
 for (const item of navigationItems) {
   item.addEventListener("click", () => {
     navigationNav.style.display = "none";
-    swapingIcon.src = "./img/burger.svg";
+    swapingIcon.src = burgerIcon;
   });
 }
 
@@ -43,7 +43,7 @@ window.onload = function () {
 
 window.addEventListener("resize", (e) => {
   if (window.innerWidth >= 900) {
-    swapingIcon.src = "./img/burger.svg";
+    swapingIcon.src = burgerIcon;
     navigationListDesktop.appendChild(navigationList);
     navigation.style.backgroundColor = "#404040";
     navigationNav.style.display = "none";

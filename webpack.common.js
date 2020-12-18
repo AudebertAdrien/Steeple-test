@@ -12,12 +12,8 @@ module.exports = {
         loader: "html-loader",
       },
       {
-        test: /\.(svg|png|jpe?g|gif)$/i,
-        loader: "file-loader",
-        options: {
-          name: "[name].[contenthash].[ext]",
-          outputPath: "img"
-        },
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: 'asset/resource',
       },
       {
         test: /\.js$/,
