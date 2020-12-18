@@ -1,20 +1,9 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const mode = process.env.NODE_ENV === "production" ? "production" : "development";
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
-  mode: mode,
-  devServer: {
-    open: true,
-  },
-  watch: true,
-  devtool: "source-map",
   entry: "./src/index.js",
-  output: {
-    filename: "main.js",
-    path: path.resolve(__dirname, "dist"),
-    publicPath: "",
-  },
   module: {
     rules: [
       {
@@ -29,7 +18,7 @@ module.exports = {
         test: /\.(svg|png|jpe?g|gif)$/i,
         loader: "file-loader",
         options: {
-          name: "[name].[ext]",
+          name: "[name].[hash].[ext]",
           outputPath: "img"
         },
       },
@@ -44,5 +33,6 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "./src/template.html",
     }),
+    new CleanWebpackPlugin(),
   ],
 };
