@@ -8,7 +8,7 @@ module.exports = merge(common, {
   mode: "production",
   devtool: "source-map",
   output: {
-    filename: "[name].[hash].bundle.js",
+    filename: "[name].[fullhash].bundle.js",
     path: path.resolve(__dirname, "dist"),
     publicPath: "",
   },
@@ -21,7 +21,7 @@ module.exports = merge(common, {
     ],
   },
   plugins: [
+    new MiniCssExtractPlugin({ filename: "[name].[contenthash].css" }),
     new CleanWebpackPlugin(),
-    new MiniCssExtractPlugin({ filename: "[name].[hash].css" }),
   ],
 });

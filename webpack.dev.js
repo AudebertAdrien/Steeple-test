@@ -7,7 +7,6 @@ module.exports = merge(common, {
   devServer: {
     open: true,
   },
-  watch: true,
   devtool: "source-map",
   output: {
     filename: "[name].bundle.js",
