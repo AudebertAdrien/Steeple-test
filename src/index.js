@@ -2,7 +2,6 @@ import "../sass/main.scss";
 import burgerIcon from './img/burger.svg';
 import arrowIcon from './img/left-arrow.svg';
 
-
 const navigation = document.querySelector(".navigation");
 
 const navigationToggle = document.querySelector(".navigation__toggle");
