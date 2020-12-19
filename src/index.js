@@ -1,6 +1,6 @@
 import "../sass/main.scss";
-import burgerIcon from './img/burger.svg';
-import arrowIcon from './img/left-arrow.svg';
+import burgerIcon from "./img/burger.svg";
+import arrowIcon from "./img/left-arrow.svg";
 
 const navigation = document.querySelector(".navigation");
 
@@ -13,7 +13,8 @@ const navigationItems = document.querySelectorAll(".navigation__item");
 const navigationListDesktop = document.querySelector(
   ".navigation__list-desktop"
 );
-
+/* const navigationLinks = document.querySelectorAll(".navigation__link");
+ */
 navigationToggle.addEventListener("click", () => {
   if (navigationNav.style.display === "block") {
     swapingIcon.src = burgerIcon;
@@ -27,10 +28,21 @@ navigationToggle.addEventListener("click", () => {
   }
 });
 
+function containActive(){
+  const element = document.getElementsByClassName("active")
+  console.log(element)
+  return element
+}
+
+console.log(navigationItems)
 for (const item of navigationItems) {
   item.addEventListener("click", () => {
     navigationNav.style.display = "none";
     swapingIcon.src = burgerIcon;
+
+    const element = containActive();
+    element[0].classList.remove("active")
+    item.classList.add("active");
   });
 }
 
