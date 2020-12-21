@@ -14,35 +14,25 @@
     background-color: $color-primary;
     box-shadow: 0 1px 1px $color-border;
 
-    // hide element on phone and tab device
-    & .navigation__list-desktop {
-      display: none;
-    }
-
     @include respond(desktop) {
       box-shadow: none;
       max-width: 100rem;
       margin: auto;
 
-      & .navigation__toggle {
-        display: none;
-      }
-      & .logo-icon {
+      .logo-icon {
         order: 1;
       }
-      & .navigation__list-desktop {
+      .navigation__list--desktop {
         display: block;
         order: 2;
-        & .navigation__list {
+        .navigation__list {
           display: flex;
         }
       }
     }
   }
   
-
   &__nav {
-    display: none;
     position: relative;
     height: 100vh;
     max-width: 81vw;
@@ -60,9 +50,6 @@
 
     @include respond(tab) {
       max-width: 40vw;
-    }
-    @include respond(desktop) {
-      display: none;
     }
   }
 
@@ -112,30 +99,3 @@
     }
   }
 }
-
-/* // Border left
-&:active::before {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 1px;
-  height: 95%;
-  margin: auto 0 auto 2px;
-  border: 1px solid $color-white;
-  border-radius: 5px;
-}
-
-// Border-bottom 
-@include respond(desktop) {
-  &:active::before {
-    width: 95%;
-    height: 2px;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 100%;
-    margin-bottom: 2px;
-  }
-} */
