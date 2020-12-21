@@ -29,19 +29,17 @@ navigationToggle.addEventListener("click", () => {
 });
 
 function containActive(){
-  const element = document.getElementsByClassName("active")
-  console.log(element)
-  return element
+  const itemActive = document.getElementsByClassName("active")
+  return itemActive;
 }
 
-console.log(navigationItems)
 for (const item of navigationItems) {
   item.addEventListener("click", () => {
     navigationNav.style.display = "none";
     swapingIcon.src = burgerIcon;
 
-    const element = containActive();
-    element[0].classList.remove("active")
+    const isActive = containActive();
+    isActive[0].classList.remove("active")
     item.classList.add("active");
   });
 }
