@@ -14,32 +14,28 @@ const navigationItems = document.querySelectorAll(".navigation__item");
 const navigationListDesktop = document.querySelector(
   ".navigation__list--desktop"
 );
- 
+
 navigationToggle.addEventListener("click", () => {
-  if (!(navigationNav.hasAttribute("hidden"))) {
+  if (!navigationNav.hasAttribute("hidden")) {
     swapingIcon.src = burgerIcon;
     navigationToggle.setAttribute("aria-expanded", "false");
-    navigationNav.setAttribute("hidden", true)
+    navigationNav.setAttribute("hidden", true);
   } else {
-    navigationNav.removeAttribute("hidden")
+    navigationNav.removeAttribute("hidden");
     navigationToggle.setAttribute("aria-expanded", "true");
     navigation.style.backgroundColor = "rgba(0, 0, 0, 0.25)";
     swapingIcon.src = arrowIcon;
   }
 });
 
-function containActive(){
-  const itemActive = document.getElementsByClassName("active")
-  return itemActive;
-}
-
 for (const item of navigationItems) {
   item.addEventListener("click", () => {
-    navigationNav.setAttribute("hidden", true)
+    navigationNav.setAttribute("hidden", true);
     swapingIcon.src = burgerIcon;
 
-    const isActive = containActive();
-    isActive[0].classList.remove("active")
+    const isActive = document.getElementsByClassName("active");
+    console.log(isActive)
+    isActive[0].classList.remove("active");
     item.classList.add("active");
   });
 }
@@ -47,9 +43,9 @@ for (const item of navigationItems) {
 window.onload = function () {
   if (window.innerWidth >= 900) {
     navigationListDesktop.appendChild(navigationList);
-    
+
     navigationListDesktop.removeAttribute("hidden");
-    navigationToggle.setAttribute("hidden", true)
+    navigationToggle.setAttribute("hidden", true);
   }
 };
 
@@ -61,11 +57,11 @@ window.addEventListener("resize", () => {
 
     navigationToggle.setAttribute("hidden", true);
     navigationListDesktop.removeAttribute("hidden");
-    navigationNav.setAttribute("hidden", true)
+    navigationNav.setAttribute("hidden", true);
   } else {
     navigationNav.appendChild(navigationList);
 
     navigationToggle.removeAttribute("hidden");
-    navigationListDesktop.setAttribute("hidden", true)
+    navigationListDesktop.setAttribute("hidden", true);
   }
 });
