@@ -1,4 +1,4 @@
-import "../sass/main.scss";
+import "../sass/index.scss";
 import burgerIcon from "./img/burger.svg";
 import arrowIcon from "./img/left-arrow.svg";
 

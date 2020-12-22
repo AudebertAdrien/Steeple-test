@@ -1,6 +1,6 @@
 ### Projet Steeple
 
-```sh
+```
 $ npm install
 $ npm run start //Development
 $ npm run build //Production
@@ -23,6 +23,19 @@ $ npm run build //Production
     - S'informer sur l'accessibilité d'un site web et le mettre en pratique sur le projet
     - [codez-un-site-web-accessible-avec-html-css](https://openclassrooms.com/fr/courses/6691451-codez-un-site-web-accessible-avec-html-css)
 
+
+#### J4
+    - Webpack 5 plus complet avec environnement de production/Loader/Plugins
+
+#### J5
+    ```correctif
+    ```
+    - Redirection du Logo vers l'accueil
+    - "Button" à la place de la balise "a" pour le burgerToggle
+    - "set/removeAttribute" pour remplacer les "display: none"
+    - "Nesting" du scss corrigé
+    - Animations manquantes des liens et menu
+    
 #### Check consigne
 
 | CONSIGNE | DONE |
