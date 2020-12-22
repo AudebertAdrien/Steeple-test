@@ -1,0 +1,25 @@
+main {
+    position: relative;
+    top: 67px;
+    z-index: -200;
+    box-shadow: inset 3px -3px 6px $color-border;
+
+    .container {
+        display: flex;
+        width: 90%;
+        margin: auto;
+        flex-direction: column;
+        
+        p {
+            color: $color-primary;
+            margin: 1rem;
+            &:first-child {
+                margin-top: 3rem;
+            } 
+        }
+
+        @include respond(desktop) {
+           max-width: 100rem;
+        }
+    }
+}
