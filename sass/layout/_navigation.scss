@@ -98,7 +98,8 @@
       color: $color-secondary;
       font-size: 1.6rem;
     }
-    &:hover {
+    &:hover,
+    &:focus {
       color: $color-white;
     }
   }
